@@ -1,8 +1,3 @@
-using Plots
-
-M=4
-w = [0.2 0.3 0.2 0.3; 0.1 0.5 0.3 0.1; 0.2 0.1 0.1 0.6; 0.4 0.2 0.1 0.3]
-
 function firstreaction(w, N::Int, maxtime::Int)
     t::Float64 = 0
     times = Float64[t]
@@ -27,7 +22,3 @@ function firstreaction(w, N::Int, maxtime::Int)
     end
     times, states
 end
-
-tt, ss = firstreaction(w, M, 30)
-plot(tt, ss, legend = false, xlabel = "Time", ylabel = "States")
-
